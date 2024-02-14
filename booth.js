@@ -27,19 +27,24 @@ function boothcompleted(num) {
 
 // Converts the completed information in the website
 function show_completed(num) {
+    var id = 'circle' + (num + 1);
+    console.log(id);
     if (booth_done[num] == 1) {
-        var id = 'circle' + num;
-        console.log(id);
-        document.getElementById(id).classList.
+
+
+        // set the class list of the id to be 'completed' and remove 'uncompleted'
+        document.getElementById(id).classList.add('completed');
+        document.getElementById(id).classList.remove('uncompleted');
     }
 }
 
 
 
 function updateboothpage() {
-    document.getElementById('circle1').innerText = booth_done[0];
-    document.getElementById('circle2').innerText = booth_done[1];
-    document.getElementById('circle3').innerText = booth_done[2];
+    console.log('updated')
+    show_completed(0);
+    show_completed(1);
+    show_completed(2);
 }
 
 

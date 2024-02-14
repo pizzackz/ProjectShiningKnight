@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Home</title>
+    <title>Booth</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -23,8 +23,8 @@
         }
     
         .circle {
-          width: 200px;
-          height: 200px;
+          width: 250px;
+          height: 250px;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -41,7 +41,10 @@
         .uncompleted {
           background-color: #888888;
         }
-
+        
+        .circle h3 {
+          text-align: center;
+        }
       </style>
 </head>
 <body onload="updateboothpage()">
@@ -57,6 +60,7 @@
                   <ul class="navbar-nav ms-auto py-4 py-lg-0">
                       <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
                       <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="booth.html">Booths</a></li>
+                      <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                   </ul>
               </div>
           </div>
@@ -66,8 +70,8 @@
           <div class="container position-relative px-4 px-lg-5">
               <div class="row gx-4 gx-lg-5 justify-content-center">
                   <div class="col-md-10 col-lg-8 col-xl-7">
-                      <div class="page-heading">
-                          <h1>Booths</h1>
+                      <div class="site-heading">
+                          <h1>Booth</h1>
                       </div>
                   </div>
               </div>
@@ -75,13 +79,32 @@
       </header>
   <div class="container">
     <h3>Complete the items at each of the booths for a QR code!</h3>
-    <div class="circle-container" style="margin-top:3rem;">
+    <div class="circle-container" style="margin-top:3rem;" onload="updateboothpage()">
       <div id="circle1" class="circle uncompleted"><h3>Spot the Clutter</h3></div>
       <div id="circle2" class="circle uncompleted"><h3>Cloudy with a Chance of Trash</h3></div>
-      <div id="circle3" class="circle"><h3>Memory Cleaner</h3></div>
+      <div id="circle3" class="circle uncompleted"><h3>Memory Cleaner</h3></div>
     </div>
   </div>
-
+  <footer class="border-top">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/project.shiningknight/">
+                          <p>Instagram</p>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="https://linktr.ee/project.shining.knight">
+                            <p>Link Tree</p>
+                        </a>
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 
