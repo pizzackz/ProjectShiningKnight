@@ -13,10 +13,11 @@ function localStorageGet() {
 //For retrieving local storage after loading page
 window.onload = localStorageGet();
 if (booth_done == null) {
-    var booth_done = [0, 0, 0, 0, 0, 0]
+    var booth_done = [0, 0, 0]
 }
 console.log('testing')
 
+// Stores the completed information into the 
 function boothcompleted(num) {
     var num = num - 1;
     booth_done[num] = 1;
@@ -24,14 +25,21 @@ function boothcompleted(num) {
     localStorageStore();
 }
 
+// Converts the completed information in the website
+function show_completed(num) {
+    if (booth_done[num] == 1) {
+        var id = 'circle' + num;
+        console.log(id);
+        document.getElementById(id).classList.
+    }
+}
+
+
 
 function updateboothpage() {
     document.getElementById('circle1').innerText = booth_done[0];
     document.getElementById('circle2').innerText = booth_done[1];
     document.getElementById('circle3').innerText = booth_done[2];
-    document.getElementById('circle4').innerText = booth_done[3];
-    document.getElementById('circle5').innerText = booth_done[4];
-    document.getElementById('circle6').innerText = booth_done[5];
 }
 
 
